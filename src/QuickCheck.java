@@ -15,7 +15,25 @@ public class QuickCheck {
    * @param node the root node of the binary tree
    */
   public static void printLongerThan7(TreeNode<String> node) {
-  }
+
+  if(node == null){
+
+    return;
+
+  }//end if
+
+  String value = node.value;
+
+  if(value.length() > 7){
+
+    System.out.println(value);
+
+  }//end if
+
+  printLongerThan7(node.left);
+  printLongerThan7(node.right);
+
+  }//end printLongerThan7
 
   /**
    * Returns the sum of all nodes holding odd numbers.
@@ -28,6 +46,18 @@ public class QuickCheck {
    * @return the sum of all odd-valued nodes
    */
   public static int oddSum(TreeNode<Integer> node) {
-      return -1;
-  }
-}
+    
+    int sum = 0;
+
+  if (node == null) {
+
+    return 0;
+
+  }//end if
+
+  return -1;
+
+  }//end oddSum
+
+  
+}//end file
